@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/ReactFitnessTracker/static/js/main.d306c67d.chunk.js",
+    "main.js.map": "/ReactFitnessTracker/static/js/main.d306c67d.chunk.js.map",
+    "runtime-main.js": "/ReactFitnessTracker/static/js/runtime-main.c2aac95a.js",
+    "runtime-main.js.map": "/ReactFitnessTracker/static/js/runtime-main.c2aac95a.js.map",
+    "static/css/2.c8956ef5.chunk.css": "/ReactFitnessTracker/static/css/2.c8956ef5.chunk.css",
+    "static/js/2.f05a73d9.chunk.js": "/ReactFitnessTracker/static/js/2.f05a73d9.chunk.js",
+    "static/js/2.f05a73d9.chunk.js.map": "/ReactFitnessTracker/static/js/2.f05a73d9.chunk.js.map",
+    "index.html": "/ReactFitnessTracker/index.html",
+    "static/css/2.c8956ef5.chunk.css.map": "/ReactFitnessTracker/static/css/2.c8956ef5.chunk.css.map",
+    "static/js/2.f05a73d9.chunk.js.LICENSE.txt": "/ReactFitnessTracker/static/js/2.f05a73d9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c2aac95a.js",
+    "static/css/2.c8956ef5.chunk.css",
+    "static/js/2.f05a73d9.chunk.js",
+    "static/js/main.d306c67d.chunk.js"
+  ]
+}
