@@ -39,27 +39,31 @@ export const LineChart = ({
         borderWidth: 3,
       },
     ],
-    options: {
-      plugins: {
-        title: {
-          display: true,
-          text: "1 REP Max Over Time",
-        },
-      },
-      scales: {
-        x: {
-          type: "time",
-          time: {
-            unit: "day",
-          },
-        },
-      },
-    },
   };
 
+  const options = {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        title: {
+          display: true,
+          text: '1 Rep Max Over Time'
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            callback: (value) => `${value} KG`
+          }
+        }
+      }
+  }
   return (
     <LineChartContainer>
-      <Line data={data} />
+      <Line data={data} options={options}/>
     </LineChartContainer>
   );
 };

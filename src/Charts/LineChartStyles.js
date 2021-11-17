@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const LineChartContainer = styled.div`
-height: 500px;
-width: 50vw;
-min-width: 500px;
+height: 600px;
+width:1200px;
 `

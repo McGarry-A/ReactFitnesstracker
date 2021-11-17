@@ -1,18 +1,21 @@
 import { useState } from "react";
 import { Donught } from "./Charts/Donught";
 import { LineChart } from "./Charts/LineChart";
-import { MaxContainer } from "./Components/GlobalStyles";
+import { MaxContainer } from "./Styles/Styles";
 import { SetNewGoal } from "./Components/SetNewGoals";
 import { initialData } from "./InitialData";
 import { NewRecord } from "./Components/NewRecord";
-import { FirstRow } from "./Components/FirstRowStyles"
-import { SecondRow } from "./Components/SecondRowStyles"
+import { FirstRow } from "./Styles/Styles";
+import { SecondRow } from "./Styles/Styles";
+import { Header } from "./Components/Header";
+import { DonughtRow } from "./Styles/Styles"
+
 function App() {
   const [state, setState] = useState(initialData);
 
   return (
     <>
-    <h1>1 REP MAX TRACKER</h1>
+      <Header />
       <FirstRow>
         <LineChart
           benchDataset={state.previousLifts.bench}
@@ -20,39 +23,43 @@ function App() {
           deadliftDataset={state.previousLifts.deadlift}
           ohpDataset={state.previousLifts.overheadpress}
         />
-        <NewRecord state={state} setState={setState} />
+        <MaxContainer>
+          <h3>Progress Towards Goals</h3>
+          <DonughtRow>
+            <Donught
+              goal={state.goals.bench}
+              currentMax={state.currentMaxes.bench}
+              lift="BenchPress"
+            />
+            <Donught
+              goal={state.goals.squat}
+              currentMax={state.currentMaxes.squat}
+              lift="Squat"
+            />
+          </DonughtRow>
+          <DonughtRow>
+            <Donught
+              goal={state.goals.deadlift}
+              currentMax={state.currentMaxes.deadlift}
+              lift="Deadlift"
+            />
+            <Donught
+              goal={state.goals.overheadpress}
+              currentMax={state.currentMaxes.overheadpress}
+              lift="Overhead Press"
+            />
+          </DonughtRow>
+        </MaxContainer>
       </FirstRow>
       <SecondRow>
-      <MaxContainer>
-        <Donught
-          goal={state.goals.bench}
-          currentMax={state.currentMaxes.bench}
-          lift="BenchPress"
-        />
-        <Donught
-          goal={state.goals.squat}
-          currentMax={state.currentMaxes.squat}
-          lift="Squat"
-        />
-        <Donught
-          goal={state.goals.deadlift}
-          currentMax={state.currentMaxes.deadlift}
-          lift="Deadlift"
-        />
-        <Donught
-          goal={state.goals.overheadpress}
-          currentMax={state.currentMaxes.overheadpress}
-          lift="Overhead Press"
-        />
-      </MaxContainer>
+        <NewRecord state={state} setState={setState} />
         <SetNewGoal
           title="Update Goals"
           goals={state.goals}
           state={state}
           setState={setState}
         />
-        </SecondRow>
-      
+      </SecondRow>
     </>
   );
 }

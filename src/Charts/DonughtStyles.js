@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
+
 export const DonughtContainer = styled.div`
-height: 300px;
-width: 300px;
+height: 150px;
+width: 200px;
 text-align: center;
+`
+
+export const DonughtHeading = styled.h3`
 `

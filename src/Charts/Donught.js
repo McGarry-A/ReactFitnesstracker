@@ -1,11 +1,11 @@
 import { Doughnut } from "react-chartjs-2";
-import { DonughtContainer } from "./DonughtStyles";
+import { DonughtContainer, DonughtHeading } from "./DonughtStyles";
 
 export const Donught = ({ goal, currentMax, lift }) => {
   const remainder = goal - currentMax;
 
   const data = {
-    labels: ["Left to achieve goal", "Current lifts"],
+    labels: ["Remaining", "Current"],
     datasets: [
       {
         data: [remainder, currentMax],
@@ -14,10 +14,22 @@ export const Donught = ({ goal, currentMax, lift }) => {
     ],
   };
 
+  const options = { 
+    responsive: true,
+    plugins: {
+      legend: {
+        position: null
+      },
+      title: {
+        display: true,
+        text: `${lift}`,
+      }
+    }
+  }
+
   return (
     <DonughtContainer>
-      <h3>{lift}</h3>
-      <Doughnut data={data} />
+      <Doughnut data={data} options={options} />
     </DonughtContainer>
   );
 };
