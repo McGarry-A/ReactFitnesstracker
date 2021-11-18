@@ -1,6 +1,6 @@
 import { NewDataset } from "./NewDataset";
 import {SetNewGoals } from "../Styles/Styles"
-
+  
 export const SetNewGoal = ({ state, setState }) => {
   return (
     <SetNewGoals>

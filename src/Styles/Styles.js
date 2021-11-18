@@ -44,7 +44,7 @@ export const AppWrapper = styled.div`
 export const Heading = styled.h1``
 
 export const NavBar = styled.div`
-margin: 5em auto;
+margin: 2em auto;
 height: 80px;
 width: 100vw;
 text-align:center;`

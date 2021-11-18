@@ -2,13 +2,10 @@ import { useState } from "react";
 import { Donught } from "./Charts/Donught";
 import { LineChart } from "./Charts/LineChart";
 import { MaxContainer } from "./Styles/Styles";
-import { SetNewGoal } from "./Components/SetNewGoals";
 import { initialData } from "./InitialData";
-import { NewRecord } from "./Components/NewRecord";
-import { FirstRow } from "./Styles/Styles";
-import { SecondRow } from "./Styles/Styles";
+import { FirstRow, SecondRow, DonughtRow } from "./Styles/Styles";
 import { Header } from "./Components/Header";
-import { DonughtRow } from "./Styles/Styles"
+import { NavRouter } from "./Components/NavRouter";
 
 function App() {
   const [state, setState] = useState(initialData);
@@ -51,15 +48,8 @@ function App() {
           </DonughtRow>
         </MaxContainer>
       </FirstRow>
-      <SecondRow>
-        <NewRecord state={state} setState={setState} />
-        <SetNewGoal
-          title="Update Goals"
-          goals={state.goals}
-          state={state}
-          setState={setState}
-        />
-      </SecondRow>
+      <NavRouter state={state} setState={setState} />
+        
     </>
   );
 }

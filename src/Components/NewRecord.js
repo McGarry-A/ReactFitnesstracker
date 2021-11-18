@@ -21,7 +21,6 @@ export const NewRecord = ({ state, setState }) => {
     if (lift === "overhead press") {
       let newLift = lift.split(" ").join("");
       setLift(newLift);
-      console.log(lift);
     }
 
     let newState = {
