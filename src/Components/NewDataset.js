@@ -1,5 +1,8 @@
 import { useState } from "react";
-import { Button, Row, Form, Col } from "react-bootstrap";
+import { Table, Row, Form, Col } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+
 export const NewDataset = ({ title, index, state, setState }) => {
   const [input, setInput] = useState("");
 
@@ -43,7 +46,7 @@ export const NewDataset = ({ title, index, state, setState }) => {
   };
 
   return (
-    <div>
+    <Table className="table">
       <Row>
         <Col>
           <Form.Label column lg={2}>
@@ -58,11 +61,9 @@ export const NewDataset = ({ title, index, state, setState }) => {
           />
         </Col>
         <Col>
-          <Button onClick={handleClick} variant="success">
-            Submit
-          </Button>
+          <FontAwesomeIcon size="2x" onClick={handleClick} icon={faCheck} />
         </Col>
       </Row>
-    </div>
+    </Table>
   );
 };

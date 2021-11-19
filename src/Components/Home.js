@@ -1,17 +1,16 @@
-import { SecondRow } from "../Styles/Styles"
 import { NewRecord } from "./NewRecord"
 import { SetNewGoal } from "./SetNewGoals"
 
 export const Home = ({state, setState}) => {
     return (
-        <SecondRow>
+        <div className="link-wrapper">
           <NewRecord state={state} setState={setState} />
           <SetNewGoal
             title="Update Goals"
             state={state}
             setState={setState}
           />
-        </SecondRow>
+        </div>
     )
 }
 

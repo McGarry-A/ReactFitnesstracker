@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.headingDiv {
+    display: flex;
+    justify-content: center;
+    padding: 2em 0;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    
+    .lineChartContainer {
+
+        padding: 2em 1em;
+        background-color: whitesmoke;
+        border-radius: 10px;
+        text-align: center;
+
+        .lineChart {
+            height: 700px;
+            width: 1000px;
+            padding: 1em 0;
+        }
+    }
+
+    .maxesContainer {
+        display: flex;
+        flex-direction: column;
+        text-align:center;
+        padding: 2em 1em;
+        background-color: whitesmoke;
+        border-radius: 10px;
+        margin: 0 0 0 1em;
+    }
+}
+
+nav {
+    margin: 1em 0;
+
+    .nav-item {
+        .nav-link {
+            font-weight: bold;
+        }
+    }
+}
+
+.link-wrapper {
+    display: flex;
+    justify-content: center;
+
+    .new-record-wrapper {
+        display: flex;
+        flex-direction:column;
+        width: 30em;
+        height: 26em;
+        justify-content:center;
+        padding: 1em;
+        background-color: whitesmoke;
+        border-radius: 10px;
+        margin: 0 0.5em;
+
+        .subtitle {
+            margin-bottom: 1em;
+            text-align: center;
+        }
+
+        button {
+            margin: 1em auto;
+            width: 10em;
+        }
+    }
+
+    .set-new-goals {
+        display: flex;
+        flex-direction:column;
+        width: 30em;
+        height: 26em;
+        justify-content:center;
+        padding: 1em;
+        background-color: whitesmoke;
+        border-radius: 10px;
+        margin: 0 0.5em;
+
+        .subtitle {
+            margin-bottom: 1em;
+            text-align: center;
+        }
+
+        .table {
+            width: 600px;
+        }
+
+        .check:hover {
+            cursor: pointer;
+        }   
+    }
+}
+
+.edit-wrapper {
+        display: flex;
+        flex-direction:column;
+        width: 900px;
+        height: 26em;
+        justify-content:center;
+        padding: 1em;
+        background-color: whitesmoke;
+        border-radius: 10px;
+        margin: 0 auto;
+
+    .input-section {
+        margin: 2em 0;
+    }
+}

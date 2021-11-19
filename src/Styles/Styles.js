@@ -1,17 +1,5 @@
 import styled from "styled-components";
 
-export const FirstRow = styled.div`
-display: flex;
-justify-content:center;
-margin: 0 15em;`
-
-export const MaxContainer = styled.div`
-display: flex;
-flex-direction: column;
-text-align:center;
-margin: 1em 2em;
-`
-
 export const SetNewGoals = styled.div`
 display: flex;
 flex-direction:column;
