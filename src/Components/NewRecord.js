@@ -1,7 +1,6 @@
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useState } from "react";
-import { NewRecordWrapper } from "../Styles/Styles";
 import { getTodaysDate } from "../utils/getTodaysDate";
 
 export const NewRecord = ({ state, setState }) => {
@@ -50,8 +49,8 @@ export const NewRecord = ({ state, setState }) => {
   
 
   return (
-    <NewRecordWrapper>
-      <h3>New Max Attempt</h3>
+    <div className="new-record-wrapper">
+      <h3 className="subtitle">New Max Attempt</h3>
       <label>Date</label>
       <ReactDatePicker
         selected={startDate}
@@ -75,6 +74,6 @@ export const NewRecord = ({ state, setState }) => {
       <label>Weight Lifted</label>
       <input type="number" onChange={(e) => handleAmount(e)}></input>
       <button onClick={handleSubmit}>Submit Entry</button>
-    </NewRecordWrapper>
+    </div>
   );
 };

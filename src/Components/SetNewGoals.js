@@ -1,12 +1,21 @@
 import { NewDataset } from "./NewDataset";
-import {SetNewGoals } from "../Styles/Styles"
   
 export const SetNewGoal = ({ state, setState }) => {
   return (
-    <SetNewGoals>
-      <h3>Set New Goals</h3>
-      <NewDataset title="Bench" index="1" state={state} setState={setState} />
-      <NewDataset title="Squat" index="2" state={state} setState={setState} />
+    <div className="set-new-goals">
+      <h3 className="subtitle">Set New Goals</h3>
+      <NewDataset
+       title="Bench"
+       index="1" 
+       state={state} 
+       setState={setState} 
+      />
+      <NewDataset 
+        title="Squat" 
+        index="2" 
+        state={state} 
+        setState={setState} 
+      />
       <NewDataset
         title="Deadlift"
         index="3"
@@ -19,6 +28,6 @@ export const SetNewGoal = ({ state, setState }) => {
         state={state}
         setState={setState}
       />
-    </SetNewGoals>
+    </div>
   );
 };

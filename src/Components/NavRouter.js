@@ -19,12 +19,12 @@ export const NavRouter = ({state, setState}) => {
         <Router>
         <div>
           <nav style={styling}>
-            <ul style={styling}>
-              <li style={{margin: '1em 2.5em'}}>
-                <Link style={linkStyle} to="/">Add</Link>
+            <ul className="nav-list" style={styling}>
+              <li className="nav-item"style={{margin: '1em 2.5em'}}>
+                <Link defaultChecked className="nav-link" style={linkStyle} to="/">Add</Link>
               </li>
-              <li style={{margin: '1em 2.5em'}}>
-                <Link style={linkStyle} to="/edit">Edit</Link>
+              <li className="nav-item"style={{margin: '1em 2.5em'}}>
+                <Link className="nav-link" style={linkStyle} to="/edit">Edit</Link>
               </li>
             </ul>
           </nav>
@@ -40,3 +40,4 @@ export const NavRouter = ({state, setState}) => {
       </Router>
     )
 }
+

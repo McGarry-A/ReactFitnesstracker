@@ -48,7 +48,7 @@ export const LineChart = ({
           position: 'top',
         },
         title: {
-          display: true,
+          display: false,
           text: '1 Rep Max Over Time'
         }
       },
@@ -62,8 +62,9 @@ export const LineChart = ({
       }
   }
   return (
-    <LineChartContainer>
-      <Line data={data} options={options}/>
-    </LineChartContainer>
+    <div className="lineChartContainer">
+      <h3>1 Rep Max Over Time</h3>
+      <Line className="lineChart" data={data} options={options}/>
+    </div>
   );
 };

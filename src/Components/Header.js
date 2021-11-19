@@ -1,9 +1,7 @@
-import { Heading, NavBar } from "../Styles/Styles";
-
 export const Header = () => {
   return (
-    <NavBar>
-      <Heading>Maxes</Heading>
-    </NavBar>
+    <div className="headingDiv">
+      <h1 className="heading">Maxes</h1>
+    </div>
   );
 };

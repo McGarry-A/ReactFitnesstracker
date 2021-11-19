@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Donught } from "./Charts/Donught";
 import { LineChart } from "./Charts/LineChart";
-import { MaxContainer } from "./Styles/Styles";
 import { initialData } from "./InitialData";
-import { FirstRow, SecondRow, DonughtRow } from "./Styles/Styles";
+import { DonughtRow } from "./Styles/Styles";
 import { Header } from "./Components/Header";
 import { NavRouter } from "./Components/NavRouter";
 
@@ -13,14 +12,14 @@ function App() {
   return (
     <>
       <Header />
-      <FirstRow>
+      <div className="hero">
         <LineChart
           benchDataset={state.previousLifts.bench}
           squatDataset={state.previousLifts.squat}
           deadliftDataset={state.previousLifts.deadlift}
           ohpDataset={state.previousLifts.overheadpress}
         />
-        <MaxContainer>
+        <div className="maxesContainer">
           <h3>Progress Towards Goals</h3>
           <DonughtRow>
             <Donught
@@ -46,10 +45,9 @@ function App() {
               lift="Overhead Press"
             />
           </DonughtRow>
-        </MaxContainer>
-      </FirstRow>
+        </div>
+      </div>
       <NavRouter state={state} setState={setState} />
-        
     </>
   );
 }

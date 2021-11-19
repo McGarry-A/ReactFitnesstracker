@@ -1,20 +1,23 @@
 import { Dropdown } from "react-bootstrap";
 
-export const BsDropdown = () => {
-  const handleChange = (e) => {
-    console.log(e.target.value);
+export const BsDropdown = ({lift, setLift}) => {
+
+  const handleLift = (e) => {
+    setLift(e.target.value);
+    console.log(lift)
   };
+
   return (
-    <Dropdown>
-      <Dropdown.Toggle variant="success" id="dropdown-basic">
-        Exercise
+    <Dropdown onSelect={(event, eventKey) => setLift(eventKey.target.innerHTML)}>
+      <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+        {lift}
       </Dropdown.Toggle>
 
-      <Dropdown.Menu>
-        <Dropdown.Item onSelect={handleChange} href="#/action-1">Bench</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Squat</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Deadlift</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Overheadpress</Dropdown.Item>
+      <Dropdown.Menu onChange={(e)=>handleLift(e)}>
+        <Dropdown.Item>bench</Dropdown.Item>
+        <Dropdown.Item>squat</Dropdown.Item>
+        <Dropdown.Item>deadlift</Dropdown.Item>
+        <Dropdown.Item>overheadpress</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );
