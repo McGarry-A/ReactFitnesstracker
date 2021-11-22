@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { Edit } from "./Edit";
 
 export const NavRouter = ({state, setState}) => {
+
     const styling = {
         display: "flex",
         justifyContent: "center",
@@ -11,9 +12,12 @@ export const NavRouter = ({state, setState}) => {
     }
 
     const linkStyle = {
-        textDecoration: "none",
-        fontSize: "2em",
-        color: "black"
+      textDecoration: "none",
+      fontSize: "2em",
+      color: "black",
+      width: "10rem",
+      textAlign: "center",
+      borderRadius: "30px"
     }
     return (
         <Router>
@@ -21,10 +25,18 @@ export const NavRouter = ({state, setState}) => {
           <nav style={styling}>
             <ul className="nav-list" style={styling}>
               <li className="nav-item"style={{margin: '1em 2.5em'}}>
-                <Link defaultChecked className="nav-link" style={linkStyle} to="/">Add</Link>
+                <Link 
+                  className="nav-link" 
+                  style={linkStyle} 
+                  to="/"
+                  >Add</Link>
               </li>
               <li className="nav-item"style={{margin: '1em 2.5em'}}>
-                <Link className="nav-link" style={linkStyle} to="/edit">Edit</Link>
+                <Link 
+                className="nav-link" 
+                style={linkStyle} 
+                to="/edit"
+                  >Edit</Link>
               </li>
             </ul>
           </nav>
